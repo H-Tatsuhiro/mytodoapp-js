@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mytodo</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <p>todo一覧</p>
+    <div class="todos">
+        <input type="checkbox" id="breakfast" name="breakfast" checked>
+        <label for="breakfast">朝ごはん</label>
+    </div>
+    <div class="todos">
+        <input type="checkbox" id="lunch" name="lunch" checked>
+        <label for="lunch">昼ごはん</label>
+    </div>
+    <div class="todos">
+        <input type="checkbox" id="dinner" name="dinner" checked>
+        <label for="dinner">夜ごはん</label>
+    </div>
+
+    <p>todo追加</p>
+    <form name="addtodoForm">
+        <label for="addtodo">todo名</label>
+        <input type="text" id="addtodo" name="addtodo">
+        <button type="submit" onclick="alertText()">追加</button>
+    </form>
+</body>
+</html>
