@@ -1,12 +1,12 @@
 const path = require("path");
-const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: 'development',
     devtool: 'inline-source-map',
-    entry: './src/index.js',
+    entry: path.resolve(__dirname, './src/index.js'),
     output: {
-        path: __dirname + '/dist',
+        path: path.resolve(__dirname, 'dist'),
         publicPath: "/dist/",
         filename: "main.js"
     },
@@ -34,13 +34,13 @@ module.exports = {
     },
     devServer: {
         static: {
-            directory: path.join(__dirname, "public/")
+            directory: path.join(__dirname, "dist/")
         },
-        port: 3000,
-        devMiddleware: {
-            publicPath: "http://localhost:3000/dist/"
-        },
-        hot: "only"
+        port: 3000
     },
-    plugins: [new webpack.HotModuleReplacementPlugin()]
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./src/index.html"
+        })
+    ]
 };
