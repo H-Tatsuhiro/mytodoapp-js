@@ -1,26 +1,10 @@
 import React from 'react';
-import { useForm } from "react-hook-form";
-
+import ReactDOM from "react-dom";
 function TodoViewForm() {
-    const {register, handleSubmit} = useForm({
-        mode : "all"
-    });
-
-    const onSubmit = (_) => {
-        const matches = document.querySelectorAll(".todos > input");
-
-        for (let i in matches) {
-            if (matches[i].checked) {
-                var el = document.getElementById("div-" + matches[i].id);
-                el.remove();
-            }
-        }
-    };
-
     return (
         <div>
             <p>todo一覧</p>
-            <form name="todoviewform" id="todoviewform" onSubmit={handleSubmit(onSubmit)}>
+            <form name="todoviewform" id="todoviewform">
                 <div>
                     <div id="todoview">
                         <div className="todos" id="div-breakfast">
