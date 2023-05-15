@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/H-Tatsuhiro/mytodoapp-js/issues"
   },
-  "homepage": "https://github.com/H-Tatsuhiro/mytodoapp-js#readme",
+  "homepage": "https://h-tatsuhiro.github.io/mytodoapp-js",
   "devDependencies": {
     "@babel/cli": "^7.21.5",
     "@babel/core": "^7.21.8",
